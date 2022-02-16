@@ -1,0 +1,257 @@
+$desktopView: "(min-width: 1130px)";
+$tabletAndMobileView: "(max-width: 1129px)";
+
+.container::before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+  }
+
+.content
+{
+    background-color: #FFFFFF;
+}
+
+.loginPanel
+{
+    @media #{$desktopView} {
+        display: table;
+        width: 100%;
+      }
+
+
+    .content
+    {
+        @media #{$desktopView} {
+            display: table-cell;
+            width: 50%;
+            vertical-align: top;
+            padding: 50px;
+          }
+
+          @media #{$tabletAndMobileView} {
+            padding: 30px 20px;
+          }
+    }  
+
+    .sidePanel
+    {
+        text-align: center;
+        background-color: #f4f5f7;
+
+        @media #{$desktopView} {
+            display: table-cell;
+            width: 50%;
+            vertical-align: top;
+            padding: 30px;
+          }
+
+          @media #{$tabletAndMobileView} {
+            display: none;
+          }
+
+          .image{
+            @media #{$desktopView} {
+                width: 464px;
+                height: 501px;
+                background-image: url("/assets/main.png");
+                margin: 0 auto 30px auto;
+              }
+          }
+
+          .welcome{
+            @media #{$desktopView} {
+                font-size: 160%;
+                line-height: 100%;
+              }
+
+              .heading{
+                @media #{$desktopView} {
+                    font-size: 160%;
+                    line-height: 100%;
+                    margin-bottom: 20px;
+                  }
+              }
+          }
+    }  
+}
+
+.backLink
+{
+    @media #{$desktopView} {
+        margin-bottom: 60px;
+      }
+
+      @media #{$tabletAndMobileView} {
+        margin-bottom: 40px;
+      }
+
+      a{
+          display: block;
+          background: url("/assets/arrow.png");
+          background-position: center left;
+          background-repeat: no-repeat;
+          padding-left: 28px;
+          padding-top: 4px;
+      }
+}
+
+
+.mainHeading
+{
+    font-size: 180%;
+    line-height: 120%;
+    margin-bottom: 30px;
+}
+
+.generalForm{
+
+    margin-bottom: 70px;
+
+    ::placeholder {
+        font-weight: bold;
+        color: #2e304f;
+      }
+
+    ol{
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+
+        li{
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px 0px 16px 0px;
+        }
+
+        li.inputQuestion{
+
+            label{
+                display: none;
+            }
+
+            input{
+
+                border: 1px solid #2e304f;
+                border-radius: 6px;
+                font-size: 120%;
+
+                @media #{$desktopView} {
+                    width: 400px;
+                  }
+                
+                @media #{$tabletAndMobileView} {
+                    width: 100%;
+                  }
+
+                padding: 12px 16px;
+            }
+        }
+
+        li.textOnly{
+            margin-bottom: 40px;
+
+            a{
+                font-weight: bold;
+            }
+        }
+
+        li.submission{
+            input{
+                cursor: pointer;
+                background-color: #603093;
+                color: #FFFFFF;
+                border-radius: 6px;
+                border: none;
+                padding: 16px 12px;
+                font-size: 110%;
+
+                @media #{$desktopView} {
+                    width: 140px;
+                  }
+                
+                @media #{$tabletAndMobileView} {
+                    width: 100%;
+                  }
+            }
+        }
+    }
+}
+
+.or{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.socialMedia{
+
+    margin-bottom: 40px;
+
+    button{
+
+        padding: 12px 16px;
+        cursor: pointer;
+        border-radius: 6px;
+        border: 1px solid #000;
+        margin-bottom: 16px;
+        font-size: 110%;
+        background-color: #FFFFFF;
+
+        @media #{$desktopView} {
+            width: 400px;
+          }
+        
+        @media #{$tabletAndMobileView} {
+            width: 100%;
+          }
+
+          .icon{
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 8px;
+          }
+
+          .text{
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 3px;
+          }
+    }
+
+    button:hover{
+        color: #3c83f7;
+        border-color: #3c83f7;
+    }
+}
+
+.google
+{
+    display: block;
+
+    .icon{
+        background: url("/assets/icon_google.svg");
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.facebook
+{
+    display: block;
+    margin-bottom: 40px;
+
+    .icon{
+        background: url("/assets/icon_facebook.svg");
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.noAccount{
+    font-weight: bold;
+}
